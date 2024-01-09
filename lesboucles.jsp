@@ -106,6 +106,27 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**</br>&nbsp;&nbsp;&nbsp;&nbsp;***</br>&nbsp;&nbsp;****</br>*****</p>
 <p>*****</br>&nbsp;&nbsp;****</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</p>
 
+<% for (int i = 1; i <= cpt; i++) { %>
+    <p>
+        <% for (int j = 1; j <= cpt - i; j++) { %>
+            <%= "&nbsp;" %>
+        <% } %>
+        <% for (int k = 1; k <= i; k++) { %>
+            <%= "*" %>
+        <% } %>
+    </p>
+<% } %>
+<% for (int i = cpt - 1; i >= 1; i--) { %>
+    <p>
+        <% for (int j = 1; j <= cpt - i; j++) { %>
+            <%= "&nbsp;" %>
+        <% } %>
+        <% for (int k = 1; k <= i; k++) { %>
+            <%= "*" %>
+        <% } %>
+    </p>
+<% } %>
+
 <h2>Exercice 7 : La table de multiplication</h2>
 <p>Ecrire le code afin de créser une table de multiplication</p>
 <p>Exemple si l'utilisateur saisie le valeur 5</p>
@@ -114,6 +135,10 @@
 <p>5 x 3 = 15</p>
 <p>5 x 4 = 20</p>
 <p>5 x 5 = 25</p>
+
+<% for (int i = 1; i <= cpt; i++) { %>
+    <p><%= cpt %> x <%= i %> = <%= cpt * i %></p>
+<% } %>
 
 <% } %>
 <p><a href="index.html">Retour au sommaire</a></p>
