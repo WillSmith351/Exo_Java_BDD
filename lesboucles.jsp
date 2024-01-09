@@ -88,10 +88,13 @@
 
 <% for (int i = 1; i <= cpt; i++) { %>
     <p>
+        <%-- Imprimer des espaces à gauche pour le centrage --%>
         <% for (int j = 1; j <= cpt - i; j++) { %>
             <%= "&nbsp;" %>
         <% } %>
-        <% for (int k = 1; k <= i; k++) { %>
+        
+        <%-- Imprimer des étoiles pour former le triangle --%>
+        <% for (int k = 1; k <= (2 * i - 1); k++) { %>
             <%= "*" %>
         <% } %>
     </p>
